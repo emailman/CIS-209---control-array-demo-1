@@ -24,7 +24,12 @@ namespace control_array_demo_1
         {
             // Increment the value shown in each label
             for (int i = 0; i < labels.Length; i++)
-                labels[i].Text = (int.Parse(labels[i].Text) + 1).ToString();               
+                labels[i].Text = (int.Parse(labels[i].Text) + 1).ToString();  
+
+            // This also works with foreach loops
+            foreach (Label item in labels) {
+                item.Text = (int.Parse(item.Text) + 1).ToString();
+            }             
         }
 
         private void btnReset_Click(object sender, EventArgs e)
